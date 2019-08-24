@@ -59,3 +59,17 @@ html, body {
     border-color:black;
   
 }
+
+
+.red{
+    color:red;
+}
+.error{
+    color:red;
+   
+}
+#grad1 {
+    height: 200px;
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, #fc4a1a , #f7b733); /* Standard syntax (must be last) */
+  }

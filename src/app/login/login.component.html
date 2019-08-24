@@ -130,41 +130,53 @@
           </div>
         </div>
     </nav>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="container col-sm-4">
-                <div class="square-service-block">
-                    <img src="assets/logo1.png" class="img-rounded" alt="Not Found">
-                    <form [formGroup]="loginForm">
-                        <div class="col-xs-2">
-                          <div class="form-group">
-                              <label for="name" style="width:60px"></label>&nbsp;<span class="red"></span>
-                              <input type="text" class="form-control" name="name" formControlName="name" placeholder="User Name">
-                          </div>  
-                        </div>
-                        <div class="col-xs-2">
+      <div class="container-fluid" id="grad1">
+          <div class="row">
+              <div class="container col-sm-4">
+                  <div class="square-service-block">
+                      <img src="assets/logo1.png" class="img-rounded" alt="Not Found">
+                      <form [formGroup]="loginForm">
+                          <div class="col-xs-2">
                             <div class="form-group">
-                                <label for="phoneNo" style="width:60px"></label>&nbsp;<span class="red"></span>
-                                <input type="text" class="form-control" name="phoneNo" formControlName="phoneNo" placeholder="Mobile Number">
-                              </div>
-                        </div>
-    
-                        <div class="col-xs-2">
-                        
-                                <div class="form-group">
-                                  <label for="funName" style="width:60px"></label>&nbsp;<span class="red"></span>
-                                  <input type="text" class="form-control" name="funName" formControlName="funName" placeholder="Function Date(27-Mar-2019)">
+                                <label for="name" style="width:60px"></label>&nbsp;<span class="red"></span>
+                                <input type="text" class="form-control" name="name" formControlName="name" placeholder="User Name">
+                                <div *ngIf="(loginForm.controls['name'].errors && (loginForm.controls['name'].dirty || loginForm.controls['name'].touched))" class="red">
+                                  <div *ngIf="loginForm.controls.name.errors.required">User name is required</div>
                                 </div>
-                        
-                        </div>
-                        
-                    </form>
-                    <br>
-                    <div class="span2">
-                        <p><button class="btn btn-orange btn-block" [routerLink]="['/booking']" (click)="login()" [disabled]="!loginForm.valid" style="background-color:#F57C00">Get Details</button></p>
-                        <p><button class="btn btn-default btn-block" [routerLink]="['/register']" style="background-color:#F57C00">Booking</button></p>
-                        </div>
+                              </div>
+                            </div>  
+                          
+                          <div class="col-xs-2">
+                              <div class="form-group">
+                                  <label for="phoneNo" style="width:60px"></label>&nbsp;<span class="red"></span>
+                                  <input type="text" class="form-control" name="phoneNo" formControlName="phoneNo" placeholder="Mobile Number">
+                                  <div *ngIf="(loginForm.controls['phoneNo'].errors && (loginForm.controls['phoneNo'].dirty || loginForm.controls['phoneNo'].touched))" class="red">
+                                    <div *ngIf="loginForm.controls.phoneNo.errors.required">Phone No is required</div>
+                                    <div *ngIf="loginForm.controls.phoneNo.errors.pattern">Phone No should begin with 7,8 or 9</div>
+                                  </div>
+                                </div>
+                          </div>
+      
+                          <div class="col-xs-2">
+                            <div class="form-group">
+                              <label for="funDate" style="width:60px"></label>&nbsp;<span class="red"></span>
+                                <input type="text" class="form-control" name="funDate" formControlName="funDate" placeholder="Function Date(27-Mar-2019)">
+                                  <div *ngIf="(loginForm.controls['funDate'].errors && (loginForm.controls['funDate'].dirty || loginForm.controls['funDate'].touched))" class="red">
+                                    <div *ngIf="loginForm.controls.funDate.errors.required">Function Date is required</div>
+                                  </div>
+                            </div>
+                          
+                          </div>
+                          <div *ngIf="errorMsg"  class = "red">{{errorMsg}}<br></div><br>
+                          <div class="span2">
+                              <p><button class="btn btn-orange btn-block " id="submit" (click)="login()" [disabled]="!loginForm.valid" style="background-color:#F57C00; color: white;">Get Details</button></p>
+                              <p><button class="btn btn-default btn-block" [routerLink]="['/register']" style="background-color:#F57C00; color: white;">Booking</button></p>
+                              
+                          </div>
+                      </form>
+                      <br>
+                      
+                  </div>
                 </div>
-              </div>
+        </div>
       </div>
-    </div>

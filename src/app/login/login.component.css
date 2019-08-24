@@ -112,6 +112,6 @@ body{
     padding:0;
     text-transform: uppercase;
   }
-  btn,p {
-    color: #F57C00
+  .p {
+    color: #ffffff
   }
