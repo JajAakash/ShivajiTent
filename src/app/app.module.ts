@@ -7,7 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { UserloginComponent } from './userlogin/userlogin.component';
+import { UserloginComponent } from './productDetails/userlogin.component';
 import { RestService } from './rest.service';
 import { LoginService } from './login/login.service';
 import { InformationService } from './information.service';

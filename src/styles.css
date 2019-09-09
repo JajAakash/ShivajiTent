@@ -55,7 +55,7 @@ html, body {
 }
 
 .navbar-default {
-    background-color: #F57C00;
+    background-color: #FF007F;
     border-color:black;
   
 }
@@ -70,6 +70,30 @@ html, body {
 }
 #grad1 {
     height: 200px;
+    background-image: url("assets/wedding2.png");
     background-color: red; /* For browsers that do not support gradients */
-    background-image: linear-gradient(to right, #fc4a1a , #f7b733); /* Standard syntax (must be last) */
+    /* background-image: linear-gradient(to right, #fc4a1a , #f7b733); */
+     /* Standard syntax (must be last) */
   }
+
+  .body{
+    background-color: blue;
+}
+
+#grad2 {
+    height: 200px;
+    background-image: url("assets/wedding3.jpg");
+    background-color: red; /* For browsers that do not support gradients */
+    /* background-image: linear-gradient(to right, #fc4a1a , #f7b733); */
+     /* Standard syntax (must be last) */
+  }
+
+  .jumbotron {
+    position: relative;
+    background-image: url("assets/wedding3.jpg");
+    width: 100%;
+    height: 300%;
+    background-size: cover;
+    overflow: hidden;
+    margin:0px auto;
+}

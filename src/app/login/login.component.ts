@@ -18,12 +18,15 @@ export class LoginComponent implements OnInit {
   login(){
     
     this.submit=true;
+    this.informationService.data=this.loginForm.value;
       this.loginService.login(this.loginForm.value).subscribe(        
         data=>{
           if(data){
             this.informationService.userName=this.loginForm.value.name;
             this.informationService.phoneNo=this.loginForm.value.phoneNo;
             this.informationService.funDate=this.loginForm.value.funDate;
+            this.informationService.data=this.loginForm.value;
+
             this.router.navigate(['/booking'])
           }
           else{

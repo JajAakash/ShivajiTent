@@ -4,4 +4,5 @@ export class BookingDetails {
     rate: number;
     totalPrice: number;
     userId:string;
+    
 }

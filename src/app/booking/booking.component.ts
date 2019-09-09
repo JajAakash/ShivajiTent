@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BookingService } from './booking.service';
 import{BookingDetails} from './bookingDetails';
 import { InformationService } from '../information.service';
+import { customerDetails } from './customerDetails';
 
 @Component({
   selector: 'app-booking',
@@ -10,7 +11,9 @@ import { InformationService } from '../information.service';
 })
 export class BookingComponent implements OnInit {
   bookingDetails: BookingDetails[];
+  customerDetails: customerDetails[];
   errorMsg: string;
+  errorMsg2: string;
   name:string;
   funDate:string;
   phoneNo:number;
@@ -20,13 +23,19 @@ export class BookingComponent implements OnInit {
     this.phoneNo=this.infoservice.phoneNo;
     this.funDate=this.infoservice.funDate;
     this.bookingService.getBookingdetails().subscribe(
-    
       item=>this.bookingDetails=item,
       error => this.errorMsg = error
-
     );
-    console.log("44444444444444444444444444");
+    this.getCustomerDetails();
   }
+  getCustomerDetails(){
+    this.bookingService.getCustomerDetails().subscribe(
+      customerDetails=>this.customerDetails=customerDetails,
+      error => this.errorMsg2 = error
+    )
+  }
+
+
 
   ngOnInit() {
     

@@ -1,3 +1,291 @@
-<p>
-  register works!
-</p>
+<nav class="navbar navbar-default" style="border: 1px solid whitesmoke">
+  <div class="container-fluid " >
+    <div class="navbar-header" >
+        <a href="#" class="pull-left"><img src="assets/logoimg.png"></a> 
+    </div>
+  </div>
+</nav>
+
+<div class="container" style="margin-top: 20px; margin-bottom:10px;">
+  <form [formGroup]="makeBookingForm">
+    <div class="row ">
+      <div class="col">
+        <div class="form-group">
+          <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="https://sc02.alicdn.com/kf/HTB1MM.rMpXXXXcuXpXXq6xXFXXXU/Hot-sale-wedding-chair-covers-cheap-spandex.jpg" alt="Card image cap">
+            <div class="card-body">
+                <div class="form-inline">
+                    <div class="card1" style="width: 200px">
+                      <div class="card-body">  
+                        <span><input type="text" class="form-control" name="productName" formControlName="productName" style="width: 130px; background-color: #f0f0f0; height: 16px; font-weight:bolder" value="Mahraja Kursi" disabled="true"></span><br>
+                        <span id="rs"><input type="text" class="form-control" name="rate" formControlName="rate" style="width: 130px; background-color: #f0f0f0; font-size: 12px; font-weight:bold"  value="501"></span><br>
+                        <span class="badge badge-secondary">QTY</span>
+                        <input type="text" class="form-control" name="unit" formControlName="unit" style="height: 20px;width: 60px;" placeholder="1" value="">
+                        <span> <button type="button" class="btn btn-outline-primary" id="submit" (click)="addProducts()">Add Item</button></span>
+                      
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>  
+        
+      </div>
+
+      <div class="col">
+        <div class="formGroup">
+          <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="https://sc02.alicdn.com/kf/HTB1MM.rMpXXXXcuXpXXq6xXFXXXU/Hot-sale-wedding-chair-covers-cheap-spandex.jpg" alt="Card image cap">
+            <div class="card-body">
+                <div class="form-inline">
+                    <div class="card1" style="width: 200px">
+                      <div class="card-body">
+                                
+                        <span><input type="text" class="form-control" name="productName" formControlName="productName" disabled="disabled" style="width: 130px; background-color: #f0f0f0; height: 16px; font-weight:bolder" value="Mahraja Kursi"></span><br>
+                        <span id="rs"><input type="text" class="form-control" name="rate" formControlName="rate" style="width: 130px; background-color: #f0f0f0; font-size: 12px; font-weight:bold"  value="Rs: 501/Unit"></span><br>
+                        <span class="badge badge-secondary">QTY</span>
+                        <input type="text" class="form-control" name="unit" formControlName="unit" style="height: 20px;width: 60px;" placeholder="1">
+                        <span> <button type="button" class="btn btn-outline-primary" id="submit" (click)="addProducts()">Add Item</button></span>
+                      
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>  
+        
+      </div>
+
+      <!-- <div class="col">
+        <div class="formGroup">
+          <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="https://sc02.alicdn.com/kf/HTB1MM.rMpXXXXcuXpXXq6xXFXXXU/Hot-sale-wedding-chair-covers-cheap-spandex.jpg" alt="Card image cap">
+            <div class="card-body">
+                <div class="form-inline">
+                    <div class="card1" style="width: 200px">
+                      <div class="card-body">
+                                
+                        <span><input type="text" class="form-control" name="productName" formControlName="productName" disabled="disabled" style="width: 130px; background-color: #f0f0f0; height: 16px; font-weight:bolder" value="Mahraja Kursi"></span><br>
+                        <span id="rs"><input type="text" class="form-control" name="price" formControlName="price" style="width: 130px; background-color: #f0f0f0; font-size: 12px; font-weight:bold"  value="Rs: 501/Unit"></span><br>
+                        <span class="badge badge-secondary">QTY</span>
+                        <input type="text" class="form-control" name="unit" formControlName="unit" style="height: 20px;width: 60px;" placeholder="1">
+                        <span> <button type="button" class="btn btn-outline-primary">Add Item</button></span>
+                      
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>  
+        
+      </div>
+      <div class="col">
+        <div class="formGroup">
+          <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="https://sc02.alicdn.com/kf/HTB1MM.rMpXXXXcuXpXXq6xXFXXXU/Hot-sale-wedding-chair-covers-cheap-spandex.jpg" alt="Card image cap">
+            <div class="card-body">
+                <div class="form-inline">
+                    <div class="card1" style="width: 200px">
+                      <div class="card-body">
+                                
+                        <span><input type="text" class="form-control" name="productName" formControlName="productName" disabled="disabled" style="width: 130px; background-color: #f0f0f0; height: 16px; font-weight:bolder" value="Mahraja Kursi"></span><br>
+                        <span id="rs"><input type="text" class="form-control" name="price" formControlName="price" style="width: 130px; background-color: #f0f0f0; font-size: 12px; font-weight:bold"  value="Rs: 501/Unit"></span><br>
+                        <span class="badge badge-secondary">QTY</span>
+                        <input type="text" class="form-control" name="unit" formControlName="unit" style="height: 20px;width: 60px;" placeholder="1">
+                        <span> <button type="button" class="btn btn-outline-primary">Add Item</button></span>
+                      
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>  
+        
+      </div>
+      <div class="col">
+        <div class="card" style="width: 15rem;">
+          <img class="card-img-top" src="data:image/jpeg;base64,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" alt="Card image cap">
+          <div class="card-body">
+              <div class="form-inline">
+                  <div class="card1" style="width: 200px">
+                    <div class="card-body">
+                              
+                      <span><input type="text" class="form-control" name="productName" formControlName="productName" disabled="disabled" style="width: 130px; background-color: #f0f0f0; height: 16px; font-weight:bolder" value="Mahraja Kursi"></span><br>
+                      <span id="rs"><input type="text" class="form-control" name="price" formControlName="price" style="width: 130px; background-color: #f0f0f0; font-size: 12px; font-weight:bold"  value="Rs: 501/Unit"></span><br>
+                      <span class="badge badge-secondary">QTY</span>
+                      <input type="text" class="form-control" name="unit" formControlName="unit" style="height: 20px;width: 60px;" placeholder="1">
+                      <span> <button type="button" class="btn btn-outline-primary">Add Item</button></span>
+                    
+                  </div>
+                  </div>
+              </div>
+          </div>
+        </div>  
+      </div>
+      <div class="col">
+        <div class="formGroup">
+          <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="https://sc02.alicdn.com/kf/HTB1MM.rMpXXXXcuXpXXq6xXFXXXU/Hot-sale-wedding-chair-covers-cheap-spandex.jpg" alt="Card image cap">
+            <div class="card-body">
+                <div class="form-inline">
+                    <div class="card1" style="width: 200px">
+                      <div class="card-body">
+                                
+                        <span><input type="text" class="form-control" name="productName" formControlName="productName" disabled="disabled" style="width: 130px; background-color: #f0f0f0; height: 16px; font-weight:bolder" value="Mahraja Kursi"></span><br>
+                        <span id="rs"><input type="text" class="form-control" name="price" formControlName="price" style="width: 130px; background-color: #f0f0f0; font-size: 12px; font-weight:bold"  value="Rs: 501/Unit"></span><br>
+                        <span class="badge badge-secondary">QTY</span>
+                        <input type="text" class="form-control" name="unit" formControlName="unit" style="height: 20px;width: 60px;" placeholder="1">
+                        <span> <button type="button" class="btn btn-outline-primary">Add Item</button></span>
+                      
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>  
+        
+      </div>
+      <div class="col">
+        <div class="formGroup">
+          <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="https://sc02.alicdn.com/kf/HTB1MM.rMpXXXXcuXpXXq6xXFXXXU/Hot-sale-wedding-chair-covers-cheap-spandex.jpg" alt="Card image cap">
+            <div class="card-body">
+                <div class="form-inline">
+                    <div class="card1" style="width: 200px">
+                      <div class="card-body">
+                                
+                        <span><input type="text" class="form-control" name="productName" formControlName="productName" disabled="disabled" style="width: 130px; background-color: #f0f0f0; height: 16px; font-weight:bolder" value="Mahraja Kursi"></span><br>
+                        <span id="rs"><input type="text" class="form-control" name="price" formControlName="price" style="width: 130px; background-color: #f0f0f0; font-size: 12px; font-weight:bold"  value="Rs: 501/Unit"></span><br>
+                        <span class="badge badge-secondary">QTY</span>
+                        <input type="text" class="form-control" name="unit" formControlName="unit" style="height: 20px;width: 60px;" placeholder="1">
+                        <span> <button type="button" class="btn btn-outline-primary">Add Item</button></span>
+                      
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>  
+        
+      </div>
+  
+  
+      <div class="col">
+        <div class="formGroup">
+          <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="https://sc02.alicdn.com/kf/HTB1MM.rMpXXXXcuXpXXq6xXFXXXU/Hot-sale-wedding-chair-covers-cheap-spandex.jpg" alt="Card image cap">
+            <div class="card-body">
+                <div class="form-inline">
+                    <div class="card1" style="width: 200px">
+                      <div class="card-body">
+                                
+                        <span><input type="text" class="form-control" name="productName" formControlName="productName" disabled="disabled" style="width: 130px; background-color: #f0f0f0; height: 16px; font-weight:bolder" value="Mahraja Kursi"></span><br>
+                        <span id="rs"><input type="text" class="form-control" name="price" formControlName="price" style="width: 130px; background-color: #f0f0f0; font-size: 12px; font-weight:bold"  value="Rs: 501/Unit"></span><br>
+                        <span class="badge badge-secondary">QTY</span>
+                        <input type="text" class="form-control" name="unit" formControlName="unit" style="height: 20px;width: 60px;" placeholder="1">
+                        <span> <button type="button" class="btn btn-outline-primary">Add Item</button></span>
+                      
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>  
+        
+      </div>
+      <div class="col">
+          <div class="card" style="width: 15rem;">
+            <img class="card-img-top" src="https://4.imimg.com/data4/MG/CC/MY-28011632/decorative-wedding-chair-500x500.jpg" alt="Card image cap">
+            <div class="card-body">
+                <div class="form-inline">
+                    <div class="card1" style="width: 200px">
+                      <div class="card-body">
+                              
+                        <span><input type="text" class="form-control" name="productName" formControlName="productName" disabled="disabled" style="width: 130px; background-color: #f0f0f0; height: 16px; font-weight:bolder" value="Mahraja Kursi"></span><br>
+                        <span id="rs"><input type="text" class="form-control" name="price" formControlName="price" style="width: 130px; background-color: #f0f0f0; font-size: 12px; font-weight:bold"  value="Rs: 501/Unit"></span><br>
+                        <span class="badge badge-secondary">QTY</span>
+                        <input type="text" class="form-control" name="unit" formControlName="unit" style="height: 20px;width: 60px;" placeholder="1">
+                        <span> <button type="button" class="btn btn-outline-primary">Add Item</button></span>
+                      
+                    </div>
+                    </div>
+                </div>
+            </div>
+          </div>  
+        </div>
+    
+        <div class="col">
+          <div class="formGroup">
+            <div class="card" style="width: 15rem;">
+              <img class="card-img-top" src="https://sc02.alicdn.com/kf/HTB1MM.rMpXXXXcuXpXXq6xXFXXXU/Hot-sale-wedding-chair-covers-cheap-spandex.jpg" alt="Card image cap">
+              <div class="card-body">
+                  <div class="form-inline">
+                      <div class="card1" style="width: 200px">
+                        <div class="card-body">
+                                  
+                          <span><input type="text" class="form-control" name="productName" formControlName="productName" disabled="disabled" style="width: 130px; background-color: #f0f0f0; height: 16px; font-weight:bolder" value="Mahraja Kursi"></span><br>
+                          <span id="rs"><input type="text" class="form-control" name="price" formControlName="price" style="width: 130px; background-color: #f0f0f0; font-size: 12px; font-weight:bold"  value="Rs: 501/Unit"></span><br>
+                          <span class="badge badge-secondary">QTY</span>
+                          <input type="text" class="form-control" name="unit" formControlName="unit" style="height: 20px;width: 60px;" placeholder="1">
+                          <span> <button type="button" class="btn btn-outline-primary">Add Item</button></span>
+                        
+                      </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          </div>  
+          
+        </div>
+        <div class="col">
+          <div class="formGroup">
+            <div class="card" style="width: 15rem;">
+              <img class="card-img-top" src="https://sc02.alicdn.com/kf/HTB1MM.rMpXXXXcuXpXXq6xXFXXXU/Hot-sale-wedding-chair-covers-cheap-spandex.jpg" alt="Card image cap">
+              <div class="card-body">
+                  <div class="form-inline">
+                      <div class="card1" style="width: 200px">
+                        <div class="card-body">
+                                  
+                          <span><input type="text" class="form-control" name="productName" formControlName="productName" disabled="disabled" style="width: 130px; background-color: #f0f0f0; height: 16px; font-weight:bolder" value="Mahraja Kursi"></span><br>
+                          <span id="rs"><input type="text" class="form-control" name="price" formControlName="price" style="width: 130px; background-color: #f0f0f0; font-size: 12px; font-weight:bold"  value="Rs: 501/Unit"></span><br>
+                          <span class="badge badge-secondary">QTY</span>
+                          <input type="text" class="form-control" name="unit" formControlName="unit" style="height: 20px;width: 60px;" placeholder="1">
+                          <span> <button type="button" class="btn btn-outline-primary">Add Item</button></span>
+                        
+                      </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          </div>  
+          
+        </div>
+        <div class="col">
+          <div class="formGroup">
+            <div class="card" style="width: 15rem;">
+              <img class="card-img-top" src="https://sc02.alicdn.com/kf/HTB1MM.rMpXXXXcuXpXXq6xXFXXXU/Hot-sale-wedding-chair-covers-cheap-spandex.jpg" alt="Card image cap">
+              <div class="card-body">
+                  <div class="form-inline">
+                      <div class="card1" style="width: 200px">
+                        <div class="card-body">
+                                  
+                          <span><input type="text" class="form-control" name="productName" formControlName="productName" disabled="disabled" style="width: 130px; background-color: #f0f0f0; height: 16px; font-weight:bolder" value="Mahraja Kursi"></span><br>
+                          <span id="rs"><input type="text" class="form-control" name="price" formControlName="price" style="width: 130px; background-color: #f0f0f0; font-size: 12px; font-weight:bold"  value="Rs: 501/Unit"></span><br>
+                          <span class="badge badge-secondary">QTY</span>
+                          <input type="text" class="form-control" name="unit" formControlName="unit" style="height: 20px;width: 60px;" placeholder="1">
+                          <span> <button type="button" class="btn btn-outline-primary">Add Item</button></span>
+                        
+                      </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          </div>  
+          
+        </div> -->
+  
+  </div>
+  <button type="button" class="btn btn-outline-primary" id="submit" (click)="makeBooking()">Add Item</button>
+  </form>
+</div>
+

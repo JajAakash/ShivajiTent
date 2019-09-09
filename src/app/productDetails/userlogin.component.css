@@ -1,0 +1,41 @@
+.navbar-default {
+    background-color: #FF007F;;
+    border-color:black;
+  
+}
+
+
+.card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 50px; /* Added */
+}
+
+.square-service-block{
+    position:relative;
+    overflow:hidden;
+    margin:15px auto;
+    }
+.square-service-block {
+  background-color: #ffbf00;
+  border-radius: 5px;
+  display: block;
+  padding: 60px 20px;
+  text-align: center;
+  width: 100%;
+}
+.square-service-block a:hover{
+  background-color: rgba(231, 76, 60, 0.8);
+  border-radius: 5px;
+}
+
+.bg{
+  background:  url("src/assets/wedding3.jpg") no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: 100%;
+
+}
+.bg1{
+  background-color: #F57C00
+}

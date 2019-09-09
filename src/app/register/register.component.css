@@ -1,0 +1,50 @@
+.card img{
+    max-height: 180px;
+}
+.card1{
+    font-family: Celias, Helvetica;
+    background-color: #f0f0f0;
+
+}
+#rs{
+    font-family: Celias, Helvetica;
+    font-size: 14px;
+    width: 130px;
+     
+}
+
+.card1 card-body{
+    font-family: Celias, Helvetica;
+    
+
+
+}
+
+
+
+.btn{
+    height: 28px; 
+    width: 93px;
+    font-size: 13px; 
+    margin-top: 5px;
+    margin-left: 7%;
+}
+.badge{
+    height:17px;
+    margin-left: 7%;
+    width: 32px;
+}
+
+.form-control{
+    border: 0;
+}
+/* .col{
+    margin-left: -1%;
+} */
+
+.incard{
+    width: 130px; 
+    background-color: #f0f0f0; 
+    margin-left: 0px; 
+    height: 16px;
+}

@@ -4,12 +4,15 @@ import { LoginComponent } from './login/login.component';
 import { from } from 'rxjs';
 import { RegisterComponent } from './register/register.component';
 import { BookingComponent } from './booking/booking.component';
+import { UserloginComponent } from './productDetails/userlogin.component';
 
 const routes: Routes = [
-  { path: 'home', component: LoginComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'booking', component: BookingComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' }
+  { path: 'order', component: UserloginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: '', redirectTo: '/order', pathMatch: 'full' }
 ];
 
 @NgModule({

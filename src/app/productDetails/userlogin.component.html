@@ -1,0 +1,88 @@
+<nav class="navbar navbar-default" style="border: 1px solid whitesmoke">
+        <div class="container-fluid " >
+          <div class="navbar-header" >
+              <a href="#" class="pull-left"><img src="assets/logoimg.png"></a> 
+          </div>
+        </div>
+</nav>
+
+<div class="container-fluid bg" >
+    <div class="row">
+            <div class="col-sm-5">
+                    <div class="card border-secondary mb-3" style="max-width: 24rem; margin-top: 100px;">
+                    <div class="card-header" style="text-align: center">Please Enter Booking Id</div>
+                    <div class="card-body text-secondary">
+                        <h5 class="card-title">Booking Id:</h5>
+                        <form [formGroup]="getbookingForm">
+                            <div class="form-group">
+                                <label for="custId" style="width:50px"></label>&nbsp;<span class="red"></span>
+                                <input type="text" class="form-control" name="custId" formControlName="custId" autofocus="true">
+                                <div *ngIf="(getbookingForm.controls['custId'].errors && (getbookingForm.controls['custId'].dirty || getbookingForm.controls['custId'].touched))" class="red">
+                                    <div *ngIf="getbookingForm.controls.custId.errors.required">Please Enter Booking Id</div>
+                                </div><br>
+                                        
+                                <button class="btn btn btn-block " id="submit" (click)="getBookingDetails()" [disabled]="!getbookingForm.valid" style="background-color:#FF007F; color: white;">Get Details</button><br>
+                                <p style="text-align: center">Or Click on Register</p>
+                                <button class="btn btn btn-block " id="submit" (click)="getBookingDetails()"style="background-color:#FF007F; color: white;">Register</button><br>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<div class="row" style="background-color: blue">
+        <div class="container-fluid">
+                <div class="col-sm-5">
+                    <div class="card border-secondary mb-3" style="max-width: 24rem; margin-top: 50px;">
+                    <div class="card-header" style="text-align: center">Please Enter Booking Id</div>
+                    <div class="card-body text-secondary">
+                        <h5 class="card-title">Booking Id:</h5>
+                        <div class="form-group">
+                            <label for="custId" style="width:50px"></label>&nbsp;<span class="red"></span>
+                            <input type="text" class="form-control" name="custId" formControlName="custId">
+                            <div *ngIf="(loginForm.controls['custId'].errors && (loginForm.controls['custId'].dirty || loginForm.controls['custId'].touched))" class="red">
+                                <div *ngIf="loginForm.controls.custId.errors.required">Please Enter Booking Id</div>
+                            </div><br>
+                            
+                            <button class="btn btn-orange btn-block " id="submit" (click)="login()" [disabled]="!loginForm.valid" style="background-color:#FF007F; color: white;">Get Details</button><br>
+                            <p style="text-align: center">Or Click on Register</p>
+                            <button class="btn btn-orange btn-block " id="submit" (click)="login()" [disabled]="!loginForm.valid" style="background-color:#FF007F; color: white;">Register</button><br>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        
+        
+</div> -->

@@ -150,7 +150,7 @@
                               <div class="form-group">
                                   <label for="phoneNo" style="width:60px"></label>&nbsp;<span class="red"></span>
                                   <input type="text" class="form-control" name="phoneNo" formControlName="phoneNo" placeholder="Mobile Number">
-                                  <div *ngIf="(loginForm.controls['phoneNo'].errors && (loginForm.controls['phoneNo'].dirty || loginForm.controls['phoneNo'].touched))" class="red">
+                                   <div *ngIf="(loginForm.controls['phoneNo'].errors && (loginForm.controls['phoneNo'].dirty || loginForm.controls['phoneNo'].touched))" class="red">
                                     <div *ngIf="loginForm.controls.phoneNo.errors.required">Phone No is required</div>
                                     <div *ngIf="loginForm.controls.phoneNo.errors.pattern">Phone No should begin with 7,8 or 9</div>
                                   </div>

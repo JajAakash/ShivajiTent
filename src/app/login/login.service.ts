@@ -13,7 +13,7 @@ export class LoginService {
 
 
   login(data:Login): Observable <boolean>{
-    return this.restService.post(this.informationService.loginUrl,data); 
+    return this.restService.post(this.informationService.bookingUrl,data); 
 
   }
 }
